@@ -6,10 +6,6 @@ public class Frobenius {
   public static boolean isMcNugget(int value){
     //TODO Return true if value can be expressed as the sum of integral multiples
     // (including multiplication by zero) of the 3 original McNugget pack size; return false otherwise.
-//    int mcnug = value;
-//    if (value - 6 == mcnug || value - 9 == mcnug || value - 20 == mcnug){
-//      return true;
-//    }
 
     if(value < 0 ) {
 
@@ -25,6 +21,19 @@ public class Frobenius {
         || (isMcNugget(value-20))))
         );
   }
+  /**
+   * Return true if the stated value can be formed as a sum of non-negative integral multiples of
+   * the elements of packSizes. If we invoke isGeneralMcNugget(value, new int[]{20, 9, 6}), the
+   * result should be identical to that returned by isMcNugget(value).
+   *
+   * @param value target/goal number.
+   * @param packSizes array of distinct, positive pack sizes, in descending order.
+   * @return true if value is a McNugget number using the specific pack sizes, false otherwise.
+   */
+  public static boolean isGeneralMcNugget(int value, int[] packSizes){
+      return false; //TODO Complete implementation for extra credit.
+  }
+
 }
 
 
